@@ -11,10 +11,11 @@
     <meta name="apple-mobile-web-app-title" content="搞钱助手">
     <meta name="theme-color" content="#FFF8E1">
     
-    <!-- App Icon (使用一个通用的钱袋图标作为示例，部署后你可以替换这个链接) -->
+    <!-- App Icon -->
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2953/2953363.png">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2953/2953363.png">
 
+    <!-- Runtime Tailwind CSS (Kept for simplicity) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -50,11 +51,9 @@
       body {
         background-color: #FFF8E1;
         font-family: 'Inter', sans-serif;
-        /* Prevent bounce scroll on iOS to feel more native */
         overscroll-behavior-y: none;
         -webkit-tap-highlight-color: transparent;
       }
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -69,20 +68,24 @@
         background: #e67e00; 
       }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- Main Entry Point for Vite -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
